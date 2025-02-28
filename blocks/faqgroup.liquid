@@ -1,0 +1,30 @@
+<div
+  class="collapsible-content__header content-container  gradient"
+  {{ block.shopify_attributes }}
+>
+  {{ block.settings.title }}
+</div>
+{% content_for 'blocks' %}
+{% schema %}
+  {
+    "name": "FAQ-Group",
+    "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "FAQ Group Title"
+      }
+    ],
+    "presets": [
+      {
+      "name": "FAQ-Group",
+      "blocks": [
+        {
+          "type": "ques-answer"
+        }
+      ]
+    }
+    ]
+  }
+{% endschema %}

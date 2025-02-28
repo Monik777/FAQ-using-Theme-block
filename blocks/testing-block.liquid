@@ -1,0 +1,38 @@
+<div class="text-block text-{{ block.settings.alignment }}">
+  {{ block.settings.text }}
+</div>
+{% schema %}
+  {
+    "name": "Text -TESTTTTTT",
+    "blocks": [{"type": "@app"}, {"type": "@theme"}],
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text_alignment",
+      "id": "alignment",
+      "label": "Alignment"
+    },
+  ],
+  "presets": [
+    { "name": "Text" },
+    {
+      "name": "likeslide-notslide",
+      "settings": {
+        "text": "<p>Hello, world!</p>"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "settings": {
+            "text": "This is a slide!"
+          }
+        }
+      ]
+    }
+  ]
+  }
+{% endschema %}

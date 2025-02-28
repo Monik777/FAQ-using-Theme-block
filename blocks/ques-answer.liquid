@@ -1,0 +1,40 @@
+<details
+    id="Details-{{ block.id }}-{{ section.id }}"
+  >
+  <summary id="Summary-{{ block.id }}-{{ section.id }}">
+    <h3 class="accordion__title inline-richtext h4">
+      {{ block.settings.question }}
+    </h3>
+    {{- 'icon-caret.svg' | inline_asset_content -}}
+  </summary>
+  <div
+    class="accordion__content rte"
+    id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+    role="region"
+    aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+  >
+    {{ block.settings.answer }}
+  </div>
+</details>
+{% schema %}
+  {
+    "name": "Question-Answer-Nested",
+    "settings": [
+      {
+        "type": "text",
+        "id": "question",
+        "label": "Add Question"
+      },
+      {
+        "type": "richtext",
+        "id": "answer",
+        "label": "Add answer"
+      }
+    ],
+    "presets": [
+      {
+        "name": "ques-answer",
+      }
+    ]
+  }
+{% endschema %}

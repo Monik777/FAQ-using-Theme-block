@@ -1,0 +1,15 @@
+<div class="grid__item page-width">
+  {% content_for 'blocks' %}
+</div>
+{% schema %}
+  {
+    "name": "FAQ",
+    "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+    "settings": [],
+    "presets": [
+      {
+        "name": "FAQ"
+      }
+    ]
+  }
+{% endschema %}
